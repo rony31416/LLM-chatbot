@@ -69,7 +69,7 @@ Before you begin, ensure you have the following installed:
    ```
 
    ### 📥 3. **Pull Required Models**
-   If you want the same models as your home PC:
+
 
    ```bash
    ollama pull llama3.2
