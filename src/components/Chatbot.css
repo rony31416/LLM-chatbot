@@ -1,0 +1,234 @@
+/* Container */
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+}
+
+/* Header */
+.chatbot-header {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  padding: 1.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.chatbot-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.chatbot-subtitle {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+}
+
+/* Messages Area */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  padding: 1.5rem;
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 2.5rem;
+}
+
+.empty-state-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state-icon svg {
+  height: 2rem;
+  width: 2rem;
+  color: white;
+}
+
+.empty-state-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.empty-state-subtitle {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+/* Message Bubbles */
+.message-wrapper {
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.message-wrapper.user {
+  justify-content: flex-end;
+}
+
+.message-wrapper.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 20rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 200ms;
+}
+
+@media (min-width: 768px) {
+  .message-bubble {
+    max-width: 28rem;
+  }
+}
+
+.message-bubble:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.message-bubble.user {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message-bubble.bot {
+  background: white;
+  color: #1f2937;
+  border-bottom-left-radius: 0;
+  border: 1px solid #f3f4f6;
+}
+
+.model-tag {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.model-tag svg {
+  height: 0.75rem;
+  width: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+/* Loading Animation */
+.loading-bubble {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid #f3f4f6;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.loading-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+.loading-dot:nth-child(1) {
+  background-color: #3b82f6;
+  animation: bounce 1s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  background-color: #9333ea;
+  animation: bounce 1s infinite;
+  animation-delay: 75ms;
+}
+
+.loading-dot:nth-child(3) {
+  background-color: #3b82f6;
+  animation: bounce 1s infinite;
+  animation-delay: 150ms;
+}
+
+/* Input Form */
+.input-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border-top: 1px solid #f3f4f6;
+}
+
+.input-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.message-input {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #1f2937;
+  transition: all 200ms;
+}
+
+.message-input::placeholder {
+  color: #9ca3af;
+}
+
+.message-input:focus {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+.send-button {
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  font-weight: 500;
+  transition: all 200ms;
+}
+
+.send-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
