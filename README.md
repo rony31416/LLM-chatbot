@@ -1,5 +1,4 @@
 
-
 # Multi-Model Chatbot
 
 A React Vite chatbot that allows users to interact with two different AI models: Ollama's Llama3.2 (running locally) and Google's Gemini API (using the free version). The chatbot maintains conversation history and features a clean, minimalist black and white design with borders.
@@ -141,7 +140,7 @@ Before you begin, ensure you have the following installed:
 
    The chatbot will respond based on the selected model. Each response shows which model generated it.
 
-4. **Continue the conversation**
+4. **Continue the conversations**
 
    The chatbot maintains the entire conversation history, so you can ask follow-up questions.
 
